@@ -1,0 +1,239 @@
+/* Estilização global */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+header.cabecalho {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffde59;
+    color: white;
+}
+
+header.cabecalho h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header.cabecalho p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Seções principais */
+main.questoes {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+fieldset.Pergunta {
+    margin-bottom: 20px;
+    border: 2px solid #d17e52;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+fieldset.Pergunta legend {
+    font-weight: bold;
+    text-align: center;
+    padding: 0 10px;
+    color: #fe9157;
+}
+
+fieldset.Pergunta p {
+    margin-bottom: 10px;
+}
+
+label {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="radio"],
+input[type="checkbox"] {
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Tabela de pontuação */
+section.tabelapontuacao {
+    margin: 20px auto;
+    max-width: 800px;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tabelapontuacao table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabelapontuacao th,
+.tabelapontuacao td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.tabelapontuacao th {
+    background-color: #f4f4f4;
+}
+
+tfoot td {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.faq {
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin: 20px 0; /* Espaço acima e abaixo da seção */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve para dar profundidade */
+}
+
+.faq h2 {
+    text-align: center; /* Centraliza o título */
+    color: #9795df; /* Cor do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.faq-item {
+    margin-bottom: 15px; /* Espaço entre cada item */
+    padding: 15px; /* Espaçamento interno para cada item */
+    background-color: #fff; /* Cor de fundo dos itens */
+    border: 1px solid #ddd; /* Borda leve para os itens */
+    border-radius: 5px; /* Bordas arredondadas para os itens */
+    transition: background-color 0.3s ease; /* Animação ao passar o mouse */
+    cursor: pointer;
+}
+
+.faq-item h3 {
+    color: #333; /* Cor do texto das perguntas */
+    transition: 0.5s ease-in-out;
+}
+
+.faq-item:hover {
+    background-color: #f1f1f1;
+}
+
+.faq-item:hover h3 {
+    color: #9795df;
+}
+
+.faq-item p {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    margin: 0;
+}
+
+.faq-item:hover p {
+    max-height: 100px; 
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+
+button#comecarQuiz {
+    display: block;
+    margin: 20px auto;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button#comecarQuiz:hover {
+    background-color: #45a049;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffde59;
+    color: white;
+    margin-top: auto; /* Garante que o footer seja "empurrado" para o final */
+}
+
+footer a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #222;
+    transition: 0.5s ease-in-out;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: none;
+    z-index: 1000;
+}
+
+.popup .messagepop {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* Imagem nas questões */
+.Pergunta img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
