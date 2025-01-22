@@ -25,6 +25,9 @@ Este projeto é um **questionário interativo** com as seguintes característica
 
 ---
 
+## Observação 🔎
+Os arquivos index.css e o formulário.html não estão sendo utilizados !
+
 ## 🤝 Mensagem de Amizade
 
 Este código é mais do que apenas linhas escritas. É um gesto de amizade e colaboração. Aproveite, explore e, acima de tudo, divirta-se aprendendo e criando coisas incríveis.  
