@@ -3,172 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Quiz do Xandy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <title>Quiz Do Xandy</title>
 </head>
 <body>
-    <!--Cabeçalho-->
-    <header>
+    
+    <header class="cabecalho">
         <h1>Quiz do Xandy para aprender HTML</h1>
-        <p>todos os detalhes são escritos no vs code</p>
+        <p>Um quiz interativo para testar seus conhecimentos em programação.</p>
     </header>
-    <main>
-        <!--Seção 01 = Introdução-->
-         <section> 
-            <h2>Sobre o Quiz</h2>
-            <p><strong>Este quiz foi desenvolvido para testar os conheicmento em programação</strong>, como linguagens de programação, conceitos básicos e mais.</p>
-            <p>Encontra-se diferentes tipos de perguntas. <br>Desafie-se</p>
-            <p>Este quiz foi feito para estudar <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>  e Desenvolvimento Web</p>
-         </section>
-         <!--Seção 02 = Pergunta 01 = múltipla escolha-->
-         <section>
-            <h2>Pergunta 01: Qual Linguagem é usada para estruturar páginas web?</h2>
-            <!--TAG form = fomulário-->
-            <!--Tag Input radio = usado para selecionar uma multipla escolha--> 
-            <form>
-                <input type="radio" value="Python" id="p1a" name="pergunta1">
-                    <label for="p1a">Python</label><br>
-                    <input type="radio" value="HTML" id="p1b" name="pergunta1">
-                    <label for="p1b">HTML</label><br>
-                    <input type="radio" value="Javascript" id="p1c" name="pergunta1">
-                    <label for="p1c">Javascript</label><br>
-                    <input type="radio" value="Ruby" id="p1d" name="pergunta1">
-                    <label for="p1d">Ruby</label><br>
-            </form>
-         </section>
-         <!--Seção 03 = Pergunta 02-->
-         <section>
-            <h2>Perunta 02: Na URL https://google.com o trecho google.com é:</h2>
-            <form>
-                <input type="text" name="Pergunta 02:" id="p2"
-                placeholder="Digite sua Resposta"> <!--PLaceholder é a escrita dento da caixa de escrita (normalmente em tons claros)-->
-            </form>
-            
-         </section>
-         <!--Seção 04 = Pergunta 03 = Senha-->
-         <section>
-            <h2>Escreva um exemplo de senha forte</h2>
-            <form>
-                <input type="password" id="p3" name="Pergunta 03:"
-                placeholder="digite uma senha">
-            </form>
-         </section>
-         <!--Seção 05 = Pergunta 04 = data-->
-         <section>
-            <h2>Em que ano o HTML lançou sua primeira versão</h2>
-            <form>
-                <input type="date" id="p4" name="Pergunta 04:">
-            </form>
-         </section>
-         <!--Seção 06 = Pergunta 05 = Seleção Múltupla-->
-         <section>
-            <h2>Quais dessas tecnologias são consideradas linguagens de programação</h2>
-            <form>
-                <input type="checkbox" id="p5a" name="pergunta5">
-                <label for="p5a">JavaScript</label><br>
-                <input type="checkbox" name="pergunta5" id="p5b">
-                <label for="p5b">Java</label><br>
-                <input type="checkbox" name="pergunta5" id="p5c">
-                <label for="p5c">Html</label><br>
-            </form>
-         </section>
-         <!--Seção 07 = Pergunta 06 = Upload-->
-         <section>
-            <h2>Faça o upload de um arquivo contendo <br>HTML</h2>
-            <form>
-                <input type="file" name="" id="p6">
-            </form>
-         </section>
-         <!--Seção 08 = Pergunta 07-->
-         <section>
-            <h2>Selecione o atributo do input que define seu tipo</h2>
-            <form>
-                <select name="pergunta07" id="p7">
-                    <option value="id">ID</option>
-                    <option value="type">Typer</option>
-                    <option value="placeholder">Placeholder</option>
-                    
-                </select>
-            </form>
-        </section>
-        <!--Seção 09 = Pergunta 08 = Imagem-->
-        <section>
-            <h2>Qual Linguagem da programação é representada pelo logotipo abaixo</h2>
-            <figure><img src="./assets/java.png" alt="Uma xícara de café, representada por um logotipo"><br>
-            <figcaption>Figura 01: Logotipo de uma linguagem de programação</figcaption>
-            </figure>
-            <input type="text" id="p8" name="pergunta8" placeholder="Digite aqui">
-        </section>
-        <!-- Tabela de Pontuação-->
-         <section>
-            <h2>Tabela de Pontuação</h2>
-            <Table border="1">
-                <thead>
-                    <tr>
-                        <th>Pontuação</th>
-                        <th>Avaliação</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr> <!--tag de linha-->
-                    <td>0-2</td>
-                    <td>Não desista! Cada tentativa é válida</td>
-                </tr>
-                <tr>
-                    <td>3-4</td>
-                    <td>Você precisa melhorar, estude mais!</td>
-                </tr>
-                <tr>
-                    <td>5-7</td>
-                    <td>Você pode estar a cima da média</td>
-                </tr>
-                <td>8-10</td>
-                <td>Parabéns, você não fez mais que a sua obrigação</td>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="2">Obrigado por participar do quiz!</td> <!--Colspan usa a quantidade de colunas!-->
-                </tr>
-            </tfoot>
-            </Table>
-         </section>
-         <!--Lista de Respostas-->
-         <section>
-            <h2>Verifique sua resposta</h2>
-            <details>
-                <summary>Clique aqui para ver as respostas</summary>
-            <!--Cria uma lista = UL não numerada = OL Numerada-->
-            <ol> 
-                <!-- cada item-->
-                <li>HTML</li> 
-                <li>Domínio</li>
-                <li>Uma senha qualquer</li>
-                <li>html</li>
-                <li>arquivo de extensão .HTML</li>
-                <li>type</li>
-                <li>Java</li>
-            </details>
-            </ol>
-         </section>
-         <!--Formulário de Feedback-->
-         <section>
-            <h2>Nos dê seu feedback</h2>
-            <form>
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name">
-            </form>
-         </section>
-         <!--Formulário de Feedback-->
-         <section>
-            <h2>Nos dê seu feedback</h2>
-            <strong><a href="formulário.html">clique aqui</a></strong> <!--usado para crirar botão clicável-->
-         </section>
+
+    <div class="popup">
+        <span class="messagepop"></span>
+    </div>
+    <!-- Conteúdo principal -->
+    <main class="questoes" style="display: none;">
+        <form action="index.html" method="post" class="respostasusuario">
+            <!-- Pergunta 1 -->
+            <fieldset class="Pergunta">
+                <legend>Pergunta 1</legend>
+                <p>Qual linguagem é usada para estruturar páginas web?</p>
+                <input type="radio" id="js" name="pergunta1" value="JS" >
+                <label for="js">JavaScript</label><br>
+                <input type="radio" id="css" name="pergunta1" value="CSS" >
+                <label for="css">CSS</label><br>
+                <input type="radio" id="html" name="pergunta1" value="HTML" >
+                <label for="html">HTML</label><br>
+                <input type="radio" id="python" name="pergunta1" value="Python" >
+                <label for="python">Python</label><br>
+            </fieldset>
+
+            <!-- Pergunta 2 -->
+            <fieldset class="Pergunta">
+                <legend>Pergunta 2</legend>
+                <p>Qual é o nome do protocolo usado para acessar páginas da web?</p>
+                <label for="pergunta2">Resposta:</label>
+                <input type="text" id="pergunta2" name="pergunta2" placeholder="Digite sua resposta" >
+            </fieldset>
+
+            <!-- Pergunta 3 -->
+            <fieldset class="Pergunta">
+                <legend>Pergunta 3</legend>
+                <p>Qual é a extensão de arquivos de um documento JavaScript</p>
+                <input type="radio" id="css-p3" name="pergunta3" value=".css" >
+                <label for="css-p3">.css</label><br>
+                <input type="radio" id="js-p3" name="pergunta3" value=".js" >
+                <label for="js-p3">.js</label><br>
+                <input type="radio" id="html-p3" name="pergunta3" value=".html" >
+                <label for="html-p3">.html</label><br>
+            </fieldset>
+
+            <!-- Pergunta 4 com imagem -->
+            <fieldset class="Pergunta">
+                <legend>Pergunta 4</legend>
+                <p>Qual o nome da linguagem na imagem abaixo?</p>
+                <img src="image.png" alt="Ícone HTML">
+                <input type="radio" id="python" name="pergunta4" value="python" >
+                <label for="python">python</label><br>
+                <input type="radio" id="java" name="pergunta4" value="java" >
+                <label for="java">java</label><br>
+                <input type="radio" id="javaScript" name="pergunta4" value="javascript" >
+                <label for="javaScript">javascript</label><br>
+            </fieldset>
+            <!-- Pergunta 5 -->
+            <fieldset class="Pergunta">
+                <legend>Pergunta 5</legend>
+                <p>Qual atributo da tag img define o texto alternativo?</p>
+                <input type="radio" id="src" name="pergunta5" value="src" >
+                <label for="src">src</label><br>
+                <input type="radio" id="alt" name="pergunta5" value="alt" >
+                <label for="alt">alt</label><br>
+                <input type="radio" id="href" name="pergunta5" value="href" >
+                <label for="href">href</label><br>
+            </fieldset>
+
+            <!-- Pergunta 6 -->
+            <fieldset class="Pergunta">
+                <legend>Pergunta 6</legend>
+                <p>Qual é o significado da tag a em HTML?</p>
+                <label for="pergunta6">Resposta:</label>
+                <input type="text" id="pergunta6" name="pergunta6" placeholder="Digite sua resposta" >
+            </fieldset>
+
+            <!-- Pergunta 7 -->
+            <fieldset class="Pergunta">
+                <legend>Pergunta 7</legend>
+                <p>Marque todas as linguagens de estilo:</p>
+                <input type="checkbox" id="css-p7" name="pergunta7" value="CSS" >
+                <label for="css-p7">CSS</label><br>
+                <input type="checkbox" id="scss-p7" name="pergunta7" value="SCSS" >
+                <label for="scss-p7">SCSS</label><br>
+                <input type="checkbox" id="javascript-p7" name="pergunta7" value="JavaScript" > 
+                <label for="javascript-p7">JavaScript</label><br>
+            </fieldset>
+
+            <!-- Pergunta 8 -->
+            <fieldset class="Pergunta">
+                <legend>Pergunta 8</legend>
+                <p>Qual propriedade CSS é usada para estilizar o ícone de uma lista?</p>
+                <label for="pergunta8">Resposta:</label>
+                <input type="text" id="pergunta8" name="pergunta8" placeholder="Digite sua resposta" >
+            </fieldset>
+
+            <!-- Pergunta 9 -->
+            <fieldset class="Pergunta">
+                <legend>Pergunta 9</legend>
+                <p>Qual propriedade CSS é usada para centralizar texto?</p>
+                <input type="radio" id="justify" name="pergunta9" value="justify" >
+                <label for="justify">justify</label><br>
+                <input type="radio" id="align" name="pergunta9" value="align" >
+                <label for="align">align</label><br>
+                <input type="radio" id="text-align" name="pergunta9" value="text-align" >
+                <label for="text-align">text-align</label><br>
+            </fieldset>
+
+            <!-- Pergunta 10 -->
+            <fieldset class="Pergunta">
+                <legend>Pergunta 10</legend>
+                <p>Qual método é usado para exibir uma mensagem de alerta em JavaScript?</p>
+                <input type="radio" id="console" name="pergunta10" value="console.log()" >
+                <label for="console">console.log()</label><br>
+                <input type="radio" id="alert" name="pergunta10" value="alert()" >
+                <label for="alert">alert()</label><br>
+                <input type="radio" id="print" name="pergunta10" value="print()" >
+                <label for="print">print()</label><br>
+            </fieldset>
+
+            <!-- Questão bônus -->
+        <fieldset class="Pergunta">
+            <legend>Questão Bônus</legend>
+            <p>Qual será a saída do seguinte código JavaScript?</p>
+            <pre>
+                const numbers = [1, 2, 3, 4];
+                const result = numbers.map((num, index) => {
+                    if (index % 2 === 0) {
+                        return num * 2;
+                    }
+                    return num;
+                }).filter(num => num > 3);
+
+                console.log(result);
+            </pre>
+            <input type="radio" id="array1" name="perguntaBonus" value="[4, 6, 8]" >
+            <label for="array1">[4, 6, 8]</label><br>
+            <input type="radio" id="array2" name="perguntaBonus" value="[4, 6]" >
+            <label for="array2">[4, 6]</label><br>
+            <input type="radio" id="array3" name="perguntaBonus" value="[2, 4, 6, 8]" >
+            <label for="array3">[2, 4, 6, 8]</label><br>
+            <input type="radio" id="array4" name="perguntaBonus" value="[8, 4]" >
+            <label for="array4">[8, 4]</label><br>
+        </fieldset>
+
+            <!-- Botão de envio -->
+            <button type="submit">Enviar Respostas</button>
+        </form>
     </main>
-    <footer>
-        <fieldset>
-        <p>&copy;Quiz de Programação. Todos os Direitos Reservados</p>
+
+    <section class="tabelapontuacao" style="display: none;">
+        <h2>Tabela de Pontuação</h2>
+        <Table border="1">
+            <thead>
+                <tr>
+                    <th>Pontuação</th>
+                    <th>Avaliação</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr> <!--tag de linha-->
+                <td>0-2</td>
+                <td>Não desista! Cada tentativa é válida</td>
+            </tr>
+            <tr>
+                <td>3-5</td>
+                <td>Você precisa melhorar, estude mais!</td>
+            </tr>
+            <tr>
+                <td>5-8</td>
+                <td>Você esta acima da média</td>
+            </tr>
+            <td>8-11</td>
+            <td>Parabéns, você não fez mais que a sua obrigação</td>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Obrigado por participar do quiz!</td> <!--Colspan usa a quantidade de colunas!-->
+            </tr>
+        </tfoot>
+        </Table>
+     </section>
+
+     <section class="faq">
+        <h2>Dúvidas Frequentes</h2>
+        
+        <div class="faq-item">
+            <h3>Quais são os tópicos abordados aqui?</h3>
+            <p>O quiz é sobre tópicos gerais relacionados à área de estudo ou treinamento proposto. As perguntas variam em complexidade para abranger diferentes níveis de conhecimento.</p>
+        </div>
+       
+        <section class="faq-item">
+            <h3>Como posso ver o gabarito?</h3>
+            <p>Após o envio do quiz, você será redirecionado para uma página com as respostas corretas e sua pontuação.</p>
+        </section>
+       
+        <section class="faq-item">
+            <h3>Posso refazer o quiz depois de enviado?</h3>
+            <p>Sim, você pode recarregar a página ou clicar em um botão de reinício para refazer o quiz.</p>
+        </section>
+       
+        <section class="faq-item">
+            <h3>Como enviar minhas respostas?</h3>
+            <p>Basta preencher todas as perguntas obrigatórias e clicar no botão "Enviar Respostas" ao final do quiz.</p>
+        </section>
+       
+        <section class="faq-item">
+            <h3>O que acontece se eu não responder tudo?</h3>
+            <p>Se você não responder todas as perguntas obrigatórias, o sistema exibirá um aviso pedindo para completá-las antes de prosseguir.</p>
+        </section>
+       
+        <button id="comecarQuiz">Começar</button>
+    </section>    
+
+     <footer>
+        <span> <a href="https://www.instagram.com/alexandreepastore/">&copy; Alexandre Pastore. </a> </span>
         <a href="https://bomdiaxandy.tech">BomDiaXandy Entreterimentos</a>
-    </fieldset>
     </footer>
+
+    <script src="send.js"></script>
+    <script src="start.js"></script>
 </body>
 </html>
