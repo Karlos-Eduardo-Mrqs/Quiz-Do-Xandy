@@ -25,8 +25,7 @@ Este projeto é um **questionário interativo** com as seguintes característica
 
 ---
 
-## Observação 🔎
-Os arquivos index.css e o formulário.html não estão sendo utilizados !
+# [Entre no site !](https://karlos-eduardo-mrqs.github.io/Quiz-Do-Xandy/)
 
 ## 🤝 Mensagem de Amizade
 
