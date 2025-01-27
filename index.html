@@ -17,8 +17,40 @@
     <div class="popup">
         <span class="messagepop"></span>
     </div>
+
+    <section class="faq">
+        <h2>Dúvidas Frequentes</h2>
+        
+        <div class="faq-item">
+            <h3>Quais são os tópicos abordados aqui?</h3>
+            <p>O quiz é sobre tópicos gerais relacionados à área de estudo ou treinamento proposto. As perguntas variam em complexidade para abranger diferentes níveis de conhecimento.</p>
+        </div>
+       
+        <section class="faq-item">
+            <h3>Como posso ver o gabarito?</h3>
+            <p>Após o envio do quiz, você será redirecionado para uma página com as respostas corretas e sua pontuação.</p>
+        </section>
+       
+        <section class="faq-item">
+            <h3>Posso refazer o quiz depois de enviado?</h3>
+            <p>Sim, você pode recarregar a página ou clicar em um botão de reinício para refazer o quiz.</p>
+        </section>
+       
+        <section class="faq-item">
+            <h3>Como enviar minhas respostas?</h3>
+            <p>Basta preencher todas as perguntas obrigatórias e clicar no botão "Enviar Respostas" ao final do quiz.</p>
+        </section>
+       
+        <section class="faq-item">
+            <h3>O que acontece se eu não responder tudo?</h3>
+            <p>Se você não responder todas as perguntas obrigatórias, o sistema exibirá um aviso pedindo para completá-las antes de prosseguir.</p>
+        </section>
+       
+        <button id="comecarQuiz">Começar</button>
+    </section> 
+
     <!-- Conteúdo principal -->
-    <main class="questoes" style="display: none;">
+    <main class="questoes">
         <form action="index.html" method="post" class="respostasusuario">
             <!-- Pergunta 1 -->
             <fieldset class="Pergunta">
@@ -160,7 +192,7 @@
         </form>
     </main>
 
-    <section class="tabelapontuacao" style="display: none;">
+    <section class="tabelapontuacao" >
         <h2>Tabela de Pontuação</h2>
         <Table border="1">
             <thead>
@@ -191,40 +223,83 @@
             </tr>
         </tfoot>
         </Table>
-     </section>
+    </section>
+    
+    <div class="gabarito">
 
-     <section class="faq">
-        <h2>Dúvidas Frequentes</h2>
-        
-        <div class="faq-item">
-            <h3>Quais são os tópicos abordados aqui?</h3>
-            <p>O quiz é sobre tópicos gerais relacionados à área de estudo ou treinamento proposto. As perguntas variam em complexidade para abranger diferentes níveis de conhecimento.</p>
+        <div class="questao">
+            <h3>Questão 1</h3>
+            <strong>Resposta Correta: HTML</strong>
+            <span>Comentário: HTML (HyperText Markup Language) é usado para estruturar páginas da web, fornecendo a base para organizar o conteúdo.</span>
         </div>
-       
-        <section class="faq-item">
-            <h3>Como posso ver o gabarito?</h3>
-            <p>Após o envio do quiz, você será redirecionado para uma página com as respostas corretas e sua pontuação.</p>
-        </section>
-       
-        <section class="faq-item">
-            <h3>Posso refazer o quiz depois de enviado?</h3>
-            <p>Sim, você pode recarregar a página ou clicar em um botão de reinício para refazer o quiz.</p>
-        </section>
-       
-        <section class="faq-item">
-            <h3>Como enviar minhas respostas?</h3>
-            <p>Basta preencher todas as perguntas obrigatórias e clicar no botão "Enviar Respostas" ao final do quiz.</p>
-        </section>
-       
-        <section class="faq-item">
-            <h3>O que acontece se eu não responder tudo?</h3>
-            <p>Se você não responder todas as perguntas obrigatórias, o sistema exibirá um aviso pedindo para completá-las antes de prosseguir.</p>
-        </section>
-       
-        <button id="comecarQuiz">Começar</button>
-    </section>    
 
-     <footer>
+        <div class="questao">
+            <h3>Questão 2</h3>
+            <strong>Resposta Correta: HTTP ou HTTPS</strong>
+            <span>Comentário: O protocolo HTTP (HyperText Transfer Protocol) é usado para acessar páginas da web, enquanto o HTTPS é a versão segura com criptografia.</span>
+        </div>
+
+        <div class="questao">
+            <h3>Questão 3</h3>
+            <strong>Resposta Correta: .js</strong>
+            <span>Comentário: Arquivos JavaScript utilizam a extensão .js. Isso permite que navegadores e servidores identifiquem e processem scripts JavaScript corretamente.</span>
+        </div>
+
+        <div class="questao">
+            <h3>Questão 4</h3>
+            <strong> Resposta Correta: Java</strong>
+            <span>Comentário: A imagem representa o ícone da linguagem Java, que é amplamente utilizada para desenvolvimento de aplicações robustas, tanto desktop quanto web.</span>
+        </div>
+
+        <div class="questao">
+            <h3>Questão 5</h3>
+            <strong>Resposta Correta: alt </strong>
+            <span>Comentário: O atributo alt é usado na tag img para definir um texto alternativo, que aparece caso a imagem não seja carregada ou para fins de acessibilidade.</span>
+        </div>
+
+        <div class="questao">
+            <h3>Questão 6</h3>
+            <strong>Resposta Correta: Âncora ou Link</strong>
+            <span>Comentário: A tag <a> é usada para criar links (ou âncoras) que conectam o usuário a outras páginas ou recursos.</span>
+        </div>
+
+        <div class="questao">
+            <h3>Questão 7</h3>
+            <strong>Respostas Corretas: CSS e SCSS</strong>
+            <span>Comentário: CSS (Cascading Style Sheets) e SCSS (uma extensão do CSS com mais funcionalidades) são linguagens usadas para estilizar páginas. JavaScript não é uma linguagem de estilo, mas de programação.
+            </span>
+        </div>
+        
+        <div class="questao">
+            <h3>Questão 8</h3>
+            <strong>Resposta Correta: list-style</strong>
+            <span>Comentário: A propriedade list-style é usada para alterar o estilo dos marcadores em listas HTML, como disc, circle ou none.</span>
+        </div>
+        
+        <div class="questao">
+            <h3>Questão 9</h3>
+            <strong>Resposta Correta: text-align</strong>
+            <span>Comentário: A propriedade CSS text-align é usada para alinhar textos horizontalmente, por exemplo, com valores como center, left ou right.</span>
+        </div>
+        
+        <div class="questao">
+            <h3>Questão 10</h3>
+            <strong>Resposta Correta: alert()</strong>
+            <span>Comentário: O método alert() é usado para exibir uma mensagem de alerta em JavaScript, geralmente em uma janela pop-up.</span>
+        </div>
+        
+        <div class="questao">
+            <h3>Questão Bônus</h3>
+            <strong>Resposta Correta: [4, 6]</strong>
+            <span>
+                Comentário:
+                O método map() multiplica por 2 os números cujos índices são pares (1 e 3 se tornam 2 e 6), mantendo os outros valores inalterados. O array resultante é [2, 2, 6, 4].
+            </span>
+            <span>O método filter() seleciona apenas os números maiores que 3, resultando em [4, 6].</span>
+        </div>
+    </div>
+
+    <footer>
         <span> <a href="https://www.instagram.com/alexandreepastore/">&copy; Alexandre Pastore. </a> </span>
         <a href="https://bomdiaxandy.tech">BomDiaXandy Entreterimentos</a>
     </footer>
