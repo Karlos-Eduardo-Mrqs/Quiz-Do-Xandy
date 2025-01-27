@@ -19,9 +19,9 @@ document.querySelector('form').addEventListener('submit', function (event) {
     let pontuacao = 0; // Armazena a pontuação
     const totalQuestoes = Object.keys(respostasCertas).length;
 
-    // Validação: verificar se todas as perguntas obrigatórias foram respondidas
-    let isValid = true;
-    let errorMessage = '';
+    const gabarito = document.querySelector('.gabarito');
+    const quizSection = document.querySelector('.questoes');
+    gabarito.style.display = 'none'; // Oculta o gabarito inicialmente
 
     const perguntasObrigatorias = [
         'pergunta1',
@@ -53,14 +53,14 @@ document.querySelector('form').addEventListener('submit', function (event) {
         }
     });
 
-    // Mostrar mensagem de erro se houver questões em branco e interromper o envio do formulário
+    // Mostrar mensagem de erro se houver questões em branco
     if (perguntasEmBranco.length > 0) {
         const listaPerguntas = perguntasEmBranco.join(', '); // Junta as perguntas em uma lista
         const mensagem = `Você deixou ${perguntasEmBranco.length} questões em branco (Questões: ${listaPerguntas})`;
-        
+
         document.querySelector('.popup').style.display = 'block';
         document.querySelector('.messagepop').innerHTML = mensagem;
-        
+
         setTimeout(() => {
             document.querySelector('.popup').style.display = 'none';
         }, 3200);
@@ -101,21 +101,24 @@ document.querySelector('form').addEventListener('submit', function (event) {
     document.querySelector('.popup').style.display = 'block';
     const mensagem = `Você acertou ${pontuacao} de ${totalQuestoes} questões!`;
     document.querySelector('.messagepop').innerHTML = mensagem;
+
     setTimeout(() => {
         document.querySelector('.popup').style.display = 'none';
     }, 3200);
-    
-    // Exibir tabela de avaliação
-    exibirAvaliacao(pontuacao, totalQuestoes);
+
+    // Exibir gabarito e avaliação
+    exibirGabaritoEavaliacao(pontuacao, totalQuestoes, gabarito, quizSection);
 });
 
-// Função para exibir a avaliação com base na pontuação
-function exibirAvaliacao(pontuacao, totalQuestoes) {
+// Função para exibir o gabarito e a avaliação com base na pontuação
+function exibirGabaritoEavaliacao(pontuacao, totalQuestoes, gabarito, quizSection) {
     const tabela = document.querySelector('.tabelapontuacao');
-    const quizSection = document.querySelector(".questoes");
     const mensagem = tabela.querySelector('tfoot tr td');
+
     tabela.style.display = 'block'; // Tornar a tabela visível
-    quizSection.style.display = 'none';
+    gabarito.style.display = 'block'; // Tornar o gabarito visível
+    quizSection.style.display = 'none'; // Ocultar as questões
+
     if (pontuacao <= 2) {
         mensagem.textContent = "Não desista! Cada tentativa é válida.";
     } else if (pontuacao <= 5) {
@@ -125,5 +128,4 @@ function exibirAvaliacao(pontuacao, totalQuestoes) {
     } else {
         mensagem.textContent = "Parabéns, você não fez mais que sua obrigação!";
     }
-
 }
