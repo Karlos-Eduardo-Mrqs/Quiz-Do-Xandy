@@ -3,17 +3,9 @@ document.querySelector('form').addEventListener('submit', function (event) {
 
     // Gabarito de respostas
     const respostasCertas = {
-        pergunta1: "HTML",
-        pergunta2: "HTTP",
-        pergunta3: ".js",
-        pergunta4: "java",
-        pergunta5: "alt",
-        pergunta6: "âncora",
-        pergunta7: ["CSS", "SCSS"],
-        pergunta8: "list-style-image",
-        pergunta9: "text-align",
-        pergunta10: "alert()",
-        perguntaBonus: "[4, 6]"
+        pergunta1: "HTML",pergunta2: "HTTP",pergunta3: ".js",pergunta4: "java",pergunta5: "alt",
+        pergunta6: "âncora",pergunta7: ["CSS", "SCSS"],pergunta8: "list-style-image",pergunta9: "text-align",
+        pergunta10: "alert()",perguntaBonus: "[4, 6]"
     };
 
     let pontuacao = 0; // Armazena a pontuação
@@ -24,25 +16,18 @@ document.querySelector('form').addEventListener('submit', function (event) {
     gabarito.style.display = 'none'; // Oculta o gabarito inicialmente
 
     const perguntasObrigatorias = [
-        'pergunta1',
-        'pergunta2',
-        'pergunta3',
-        'pergunta4',
-        'pergunta5',
-        'pergunta6',
-        'pergunta7',
-        'pergunta8',
-        'pergunta9',
-        'pergunta10'
+        'pergunta1','pergunta2','pergunta3','pergunta4','pergunta5',
+        'pergunta6','pergunta7','pergunta8','pergunta9','pergunta10'
     ];
 
     let perguntasEmBranco = []; // Array para armazenar as perguntas não respondidas
 
+    // Verificar se há perguntas em branco
     perguntasObrigatorias.forEach(pergunta => {
         const elementos = document.getElementsByName(pergunta);
 
         if (elementos.length > 0) {
-            if (elementos[0].type === 'radio' || elementos[0].type === 'checkbox') {
+            if (['radio', 'checkbox'].includes(elementos[0].type)) {
                 const algumMarcado = Array.from(elementos).some(el => el.checked);
                 if (!algumMarcado) {
                     perguntasEmBranco.push(pergunta); // Adiciona a pergunta ao array
@@ -58,13 +43,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
         const listaPerguntas = perguntasEmBranco.join(', '); // Junta as perguntas em uma lista
         const mensagem = `Você deixou ${perguntasEmBranco.length} questões em branco (Questões: ${listaPerguntas})`;
 
-        document.querySelector('.popup').style.display = 'block';
-        document.querySelector('.messagepop').innerHTML = mensagem;
-
-        setTimeout(() => {
-            document.querySelector('.popup').style.display = 'none';
-        }, 3200);
-
+        exibirMensagemPopup(mensagem);
         return; // Interrompe a execução caso as respostas sejam inválidas
     }
 
@@ -98,17 +77,25 @@ document.querySelector('form').addEventListener('submit', function (event) {
     }
 
     // Exibir pontuação
-    document.querySelector('.popup').style.display = 'block';
-    const mensagem = `Você acertou ${pontuacao} de ${totalQuestoes} questões!`;
-    document.querySelector('.messagepop').innerHTML = mensagem;
-
-    setTimeout(() => {
-        document.querySelector('.popup').style.display = 'none';
-    }, 3200);
+    const mensagemPontuacao = `Você acertou ${pontuacao} de ${totalQuestoes} questões!`;
+    exibirMensagemPopup(mensagemPontuacao);
 
     // Exibir gabarito e avaliação
     exibirGabaritoEavaliacao(pontuacao, totalQuestoes, gabarito, quizSection);
 });
+
+// Função para exibir mensagens no popup
+function exibirMensagemPopup(mensagem) {
+    const popup = document.querySelector('.popup');
+    const messagepop = document.querySelector('.messagepop');
+
+    popup.style.display = 'block';
+    messagepop.textContent = mensagem;
+
+    setTimeout(() => {
+        popup.style.display = 'none';
+    }, 3200);
+}
 
 // Função para exibir o gabarito e a avaliação com base na pontuação
 function exibirGabaritoEavaliacao(pontuacao, totalQuestoes, gabarito, quizSection) {
